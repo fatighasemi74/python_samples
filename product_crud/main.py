@@ -3,8 +3,7 @@ from product import Product
 from circle import Circle
 
 def main():
-    print('Hello World')
-    
+
 
     mycircle = Circle(8)
 
@@ -45,10 +44,10 @@ def main():
     product_one.create()
     product_two.create()
 
+    product_one.delete()
 
     for p in product_one.list_all():
         print(p)
-
     print("-------------------------------------")
     print("Does Product one instance of <<Circle>> class?")
     print(isinstance(product_one, Circle))

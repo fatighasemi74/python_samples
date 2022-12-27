@@ -2,11 +2,13 @@ from datetime import datetime
 
 class Product():
 
-    _product_list = {}
+    _product_list = []
 
     def __init__(self, title:str, short_description:str , description:str  , slug:str, permalink:str, sku:str, price:float, regular_price:float,
                  sale_price:float, manage_stock:bool, stock_quantity:int, date_created_gmt :int, date_modified_gmt:int,category_id:int = 0, 
                  is_visible = True, is_available:bool = False):
+
+        assert price >= 0 , f"price {price} is not greater than or equal to 0"
 
         self.id = None
         self.category_id = category_id
@@ -28,12 +30,14 @@ class Product():
        
 
     def create(self):
-        self._product_list[self] = self.id
+        # self._product_list[self] = self.id
+        self._product_list.append(self)
+
         return self.__repr__()
 
     #this method shall be able read a product via id/uuid or ... from the the product datastructure (dictionary,list or maybe database)
-    def read(self):
-        pass
+    def read(self, id):
+        return self._product_list[id]
 
     #this method shall be able to update product and amend the data structure for related product
     def update(self):
@@ -41,14 +45,19 @@ class Product():
 
     #this method shall be able to remove the product
     def delete(self):
-        pass
+        if self._product_list == {}:
+            print('nothing to delete')
+        else:
+            self._product_list.remove(self)
+            print('item deleted')
 
     #shall I get all products with staticmethod ? any better solution ? what about a class method ?
     # what is the diffrence ?
     # shall I seprate the datastructe from the class ? why? who? any better solution?
     @staticmethod
     def list_all():
-        return tuple(Product._product_list.keys())
+        # return tuple(Product._product_list.keys())
+        return tuple(Product._product_list)
 
 
     def __repr__(self) -> str:
