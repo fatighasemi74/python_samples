@@ -43,24 +43,24 @@ class Product():
         # return self._product_list[id]
 
     #this method shall be able to update product and amend the data structure for related product
-    def update(self):
+    def update(self, updated_item):
         pass
 
+
     #this method shall be able to remove the product
-    def delete(self):
-        if self._product_list == {}:
-            print('nothing to delete')
-        else:
-            self._product_list.remove(self)
-            print('item deleted')
+    def delete(self, id):
+        for value, key in self._product_list.items():
+            if value == id:
+                self._product_list.remove(key)
+                return 'deleted'
 
     #shall I get all products with staticmethod ? any better solution ? what about a class method ?
     # what is the diffrence ?
     # shall I seprate the datastructe from the class ? why? who? any better solution?
     @staticmethod
     def list_all():
-        # return tuple(Product._product_list.keys())
-        return tuple(Product._product_list)
+        return tuple(Product._product_list.keys())
+        # return tuple(Product._product_list)
 
 
     def __repr__(self) -> str:
