@@ -41,11 +41,13 @@ def main():
         current_unixtimestamp,
         1)
  
-    product_one.create()
-    product_two.create()
+    #I would like to pass an Id when I create a  new product
+    product_one.create(1000)
+    product_two.create(1001)
 
     product_one.delete()
 
+<<<<<<< HEAD
     for p in product_one.list_all():
         print(p)
     print("-------------------------------------")
@@ -53,6 +55,22 @@ def main():
     print(isinstance(product_one, Circle))
     print("Does Product one instance of <<Product>> class?")
     print(isinstance(product_one, Product))
+=======
+   # print("-------------------------------------")
+   # print("Does Product one instance of <<Circle>> class?")
+    # print(isinstance(product_one, Circle))
+   # print("Does Product one instance of <<Product>> class?")
+    # print(isinstance(product_one, Product))
+
+
+   # del product_one
+   # del product_two
+
+    #for p in Product.list_all():
+    #    print(p)
+
+    #print(Product._product_list)
+>>>>>>> 236cda22cc60875fd01adf31c6449f4b45d2d40c
 
 if __name__ == '__main__':
     # This code won't run if this file is imported.
