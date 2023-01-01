@@ -47,7 +47,6 @@ def main():
 
     product_one.delete()
 
-<<<<<<< HEAD
     for p in product_one.list_all():
         print(p)
     print("-------------------------------------")
@@ -55,7 +54,6 @@ def main():
     print(isinstance(product_one, Circle))
     print("Does Product one instance of <<Product>> class?")
     print(isinstance(product_one, Product))
-=======
    # print("-------------------------------------")
    # print("Does Product one instance of <<Circle>> class?")
     # print(isinstance(product_one, Circle))
@@ -70,7 +68,6 @@ def main():
     #    print(p)
 
     #print(Product._product_list)
->>>>>>> 236cda22cc60875fd01adf31c6449f4b45d2d40c
 
 if __name__ == '__main__':
     # This code won't run if this file is imported.
