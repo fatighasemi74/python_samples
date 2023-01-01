@@ -77,7 +77,10 @@ class Product():
 
     #this method shall be able to remove the product
     def delete(self, id):
-        pass
+        for item in Product._product_list:
+            if item['id'] == id:
+                self._product_list.remove(item)
+                return 'deleted'
 
 
     #shall I get all products with staticmethod ? any better solution ? what about a class method ?
