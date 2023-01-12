@@ -2,8 +2,8 @@ class ProductOnMemory():
 
     _product_list = []
 
-    def __int__(self, data:dict):
-        self._data = data
+    # def __int__(self, data:dict):
+    #     self._data = data
 
     @classmethod
     def add(cls,obj) -> int:
@@ -13,13 +13,14 @@ class ProductOnMemory():
         except:
             return False
 
-    def read_by_id(self, id:int):
+#read_by_id
+    def read(self, id:int) -> dict:
         for item in self._product_list:
             if item['id'] == id:
                 return item
         return False
 
-    def read_by_title(self, title:str):
+    def read_by_title(self, title:str) -> dict:
         for item in self._product_list:
             if item['title'] == title:
                 return item
@@ -44,3 +45,5 @@ class ProductOnMemory():
                 return self._product_list
         return False
 
+    def list_all(self) -> list:
+        return self._product_list

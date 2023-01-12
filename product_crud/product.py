@@ -1,4 +1,6 @@
 from datetime import datetime
+from product_inmemory_db import ProductInMemoryDb
+from product_injson_db import ProductInJsonDb
 
 class Product():
 
@@ -23,6 +25,8 @@ class Product():
         self.is_visible = is_visible
         self.date_created_gmt = date_created_gmt
         self.date_modified_gmt = date_modified_gmt
+        self.db = ProductInMemoryDb()
+        self.jsondb = ProductInJsonDb()
        
     @property
     def dict(self) -> dict:
@@ -50,6 +54,32 @@ class Product():
     def create(self, id:int) -> dict:
         self.id = id
         return self.dict
+
+    def read(self, id:int) -> dict:
+        return self.jsondb.read(id)
+        # for item in Product._product_list:
+        #     if item['id'] == id:
+        #         return item
+        # return "not found"
+
+    def update(self):
+        return self.jsondb.update(self.id, self.dict())
+        # for item in Product._product_list:
+        #     if item['id'] == id:
+        #         item['key'] = updated_value
+        #         return item
+
+    def delete(self, id):
+        return  self.jsondb.delete(id)
+        # for item in Product._product_list:
+        #     if item['id'] == id:
+        #         self._product_list.remove(item)
+        #         return 'deleted'
+
+    def list_all(self):
+        return self.jsondb.list_all()
+        # return Product._product_list
+        # return tuple(Product._product_list.keys())
 
 
 
