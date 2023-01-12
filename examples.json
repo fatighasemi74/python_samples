@@ -1,0 +1,40 @@
+
+[
+  {
+    "id": 1,
+    "category_id": 1,
+    "title": "Lenovo T410s",
+    "short_description": "Lenovo ThinkPad T410s Core i5 M560 2.66GHz 4GB RAM, WIN 10 14\" AC ADAPTER",
+    "slug": "thinkbook-13x-gen-2-(13-inch-intel)",
+    "short_description": "The T410s provides a good companion for office use, that is well suited for business trips thanks to its 14.1 inch size and light weight.",
+    "permalink": "https://www.lenovo.com/gb/en/p/laptops/thinkbook/thinkbookx/thinkbook-13x-gen-2-(13-inch-intel)/21atcto1wwgb2?cid=gb:sem|se|google|G-UK-SEM-COMMERCIAL-PUBLIC-CCF-LF-Shopping-PLA-Brand-Commercial|Brand-CommercialLaptops-Intel",
+    "sku": "21ATCTO1WWGB2",
+    "price": 799.95,
+    "sale_price": 0,
+    "manage_stock": false,
+    "stock_quantity": 4,
+    "is_available": false,
+    "is_visible": true,
+    "date_created_gmt": 1673390821,
+    "date_modified_gmt": 1673390821
+  },
+
+  {
+    "id": 2,
+    "category_id": 1,
+    "title": "Lenovo T530",
+    "short_description": "Lenovo ThinkPad T410s Core i5 M560 2.66GHz 4GB RAM, WIN 10 14\" AC ADAPTER",
+    "slug": "thinkbook-13x-gen-2-(13-inch-intel)",
+    "short_description": "The T410s provides a good companion for office use, that is well suited for business trips thanks to its 14.1 inch size and light weight.",
+    "permalink": "https://www.lenovo.com/gb/en/p/laptops/thinkbook/thinkbookx/thinkbook-13x-gen-2-(13-inch-intel)/21atcto1wwgb2?cid=gb:sem|se|google|G-UK-SEM-COMMERCIAL-PUBLIC-CCF-LF-Shopping-PLA-Brand-Commercial|Brand-CommercialLaptops-Intel",
+    "sku": "X394UB83NJ",
+    "price": 500.95,
+    "sale_price": 0,
+    "manage_stock": false,
+    "stock_quantity": 4,
+    "is_available": false,
+    "is_visible": true,
+    "date_created_gmt": 1673390821,
+    "date_modified_gmt": 1673390821
+  }
+]
